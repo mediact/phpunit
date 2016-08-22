@@ -897,13 +897,7 @@ class PHPUnit_Util_Configuration
      */
     protected function getTestSuite(DOMElement $testSuiteNode, $testSuiteFilter = null)
     {
-        if ($testSuiteNode->hasAttribute('name')) {
-            $suite = new PHPUnit_Framework_TestSuite(
-                (string) $testSuiteNode->getAttribute('name')
-            );
-        } else {
-            $suite = new PHPUnit_Framework_TestSuite;
-        }
+        $suite = new PHPUnit_Framework_TestSuite;
 
         $exclude = [];
 
